@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#created by Mohammed Asif Chand
+#Note: all the configuration or setup have been scripted here based on the requirements of my alienware r3 running ubuntu 16.04
+
+
+
 sudo apt-get install update
 working_dir=`pwd`
 
@@ -37,16 +42,47 @@ gcc_gplusplus_update(){
 sudo apt-get install gcc
 sudo apt-get install build-essential
 
-
 }
 
 
 opencv_three_install(){
 
 #install dependencies first
+
  
+sudo apt-get install libgtk-3-dev #installs GTK 
+sudo apt-get install libgstreamer1.0-0 libgstreamer1.0-0-dbg libgstreamer1.0-dev 
+sudo apt-get install libavcodec-dev  #audio video codecs
+sudo apt-get install libdc1394-22 libdc1394-22-dbg libdc1394-22-dev #high level programming interface for IEEE 1394 digital cameras
+sudo apt-get install libv4l-dev #error?  linux/videodev.h
+sudo apt-get install libavformat-dev #FFmpeg library with (de)muxers for multimedia containers - development files
+sudo apt-get install libavutil-dev
+sudo apt-get install libswscale-dev
+sudo apt-get install libavresample
+sudo apt-get install libgphoto2-dev
+sudo apt-get install libblas-test libopenblas-base libopenblas-dev #BLAS routines based on GotoBlas2
 
+echo "installing VTK"
 
+echo " VTK is an opensource visualization tool kit "
+
+cd ~/Downloads
+
+git clone https://github.com/Kitware/VTK.git
+
+cd VTK
+
+mkdir build 
+
+cd build
+
+cmake ..
+
+echo " I am using 8 threads as I have a quadcore processor, if not please stop and change the value of cores" 
+
+cores=8
+
+sudo make install -j$cores
 
 
 #install necessary tools 
@@ -75,8 +111,6 @@ mkdir build
 cd build
 
 
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
-
 sudo apt-get install cmake-curses-gui
 
 echo " ccmake is also installed for graphical configuration of cmake based files" 
@@ -91,6 +125,9 @@ case "$choice" in
 	exit 1
 ;;
 esac
+
+
+sudo make install -j8
 
 }
 
