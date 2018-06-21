@@ -1,8 +1,20 @@
 sudo apt-get install git
+
+###########################
+##			##
+##	GIT FOLDER 	##
+##    INITIALIZATION    ##
+##       SCRIPT	        ##
+##       BY: ASIF	##
+##			##
+##########################
+
+echo " Please edit parameters inside the script first, example USERNAME?,EMAIL"
+
 USERNAME=ASif2660
 EMAIL=mdasifchand@gmail.com
 LOCALREPO=scripts
-FILES="scripts.sh README"
+FILES="github.sh README" #files are to be added here  
 MESSAGE='adding files related to script'
 
 
@@ -23,7 +35,7 @@ gedit README
 
 echo "adding files"
 
-git add $FILES
+git add *
 
 echo " committing them" 
 
