@@ -15,7 +15,7 @@ USERNAME=ASif2660
 EMAIL=mdasifchand@gmail.com
 LOCALREPO=scripts
 FILES="github.sh README" #files are to be added here  
-MESSAGE='adding files related to script'
+MESSAGE='tensor flow installation has a problem'
 
 
 git config --global user.name "$USERNAME"

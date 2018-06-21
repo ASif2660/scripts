@@ -20,6 +20,9 @@ echo " Updates only python-pip, not a big of pip3, add your own updates ;) "
 
 pip install -U pip
 
+#sudo dnf reinstall python3-pip
+
+sudo apt install python-testresources
 
 }
 
@@ -33,6 +36,11 @@ echo " This modules does not install deep learning libraries !!"
 
 sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
 python -m  pip install --user jupyter
+
+sudo pip install tensorflow-gpu
+
+#sudo pip3 install tensorflow-gpu
+
 
 }
 
@@ -154,11 +162,11 @@ sleep 1
 }
 
 
-gcc_gplusplus_update
+#gcc_gplusplus_update
 python_running
 python_libraries_basic
-cuda_install_from_deb
-opencv_three_install
-./thesisRelatedScript.sh
+#cuda_install_from_deb
+#opencv_three_install
+#./thesisRelatedScript.sh
 
 
