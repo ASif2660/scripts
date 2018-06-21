@@ -4,3 +4,4 @@ github.sh -> initializes the folders and libraries to git directly.
 
 utilities-work.sh -> initializes all the necessary C/C++ libraries, computervision, statistics, machine leanring libraries with cuda support. TODO: DL installation 
 
+NOTE: USE THE SCRIPTS AT YOUR OWN RISK.
