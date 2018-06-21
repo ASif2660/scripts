@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 #created by Mohammed Asif Chand
 #Note: all the configuration or setup have been scripted here based on the requirements of my alienware r3 running ubuntu 16.04
@@ -82,7 +82,7 @@ echo " I am using 8 threads as I have a quadcore processor, if not please stop a
 
 threads=8 #using hyperthreading, if you have 2 cores use 4 threads only for effective use 
 
-make install -j$threads
+sudo make install -j$threads
 
 
 #install necessary tools 
@@ -127,8 +127,9 @@ case "$choice" in
 esac
 
 
-make install -j$threads
+sudo make install -j$threads
 
+cd $working_dir
 }
 
 
@@ -151,7 +152,6 @@ echo " Continue "
 sleep 1
 
 }
-
 
 
 gcc_gplusplus_update

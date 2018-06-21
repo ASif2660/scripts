@@ -93,8 +93,8 @@ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
-catkin_make
 source devel/setup.bash
+catkin_make
  echo $ROS_PACKAGE_PATH
 
 }
@@ -104,7 +104,7 @@ DownloadThesisSourceCode(){
 
 ##nothing here
 ##confidential
-
+echo " does nothing" 
 
 }
 
